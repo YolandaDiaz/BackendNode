@@ -38,13 +38,8 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-router.get('/tags', async (req, res, next) => {
-    try{
-        const tagLists = await Anuncio.listTags();
-        res.json({tags: tagLists});
-    }catch(err){
-        next(err);
-    }
+router.get('/tags', function (req, res) {
+    res.json({ok: true, result: Anuncio.allowTags() });
   });
 
 router.get('/:id', async (req, res, next) => {
