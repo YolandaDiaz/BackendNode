@@ -1,5 +1,4 @@
-{
-"anuncios": [
+[
     {   "name": "Bicicleta",
         "sale": true,
         "price": 150,
@@ -42,4 +41,3 @@
         "tags": [ "work", "lifestyle"]
     }
 ]
-}

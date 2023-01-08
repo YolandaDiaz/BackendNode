@@ -39,6 +39,12 @@ router.get('/', async (req, res, next) => {
   }
 });
 
+// GET existing unique tags
+router.get('/tags', async function (req, res) {
+    const tagLists = req.query.tags;
+    res.json({results: tagLists});
+  });
+
 router.get('/:id', async (req, res, next) => {
   try {
     const id = req.params.id;
