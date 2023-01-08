@@ -1,6 +1,6 @@
 # Nodepop
 
-### An app for buying and selling ads, designed with Node.js and MongoDB.
+### An API for buying and selling ads, designed with Node.js and MongoDB.
 
 Deploy:
 
