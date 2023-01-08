@@ -54,3 +54,6 @@ http://127.0.0.1:3000/api/anuncios?sort=price
 The API returns the images of each advertisement by doing a
 request to url:
 http://127.0.0.1:3000/images/*.jpg
+
+The API returns the list of existing tags by doing a request to url:
+http://127.0.0.1:3000/api/anuncios/tags
