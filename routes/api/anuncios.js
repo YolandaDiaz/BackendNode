@@ -1,6 +1,5 @@
 'use strict';
 
-const connectMongoose = require('../../lib/connectMongoose');
 const express = require('express');
 const createError = require('http-errors');
 const Anuncio = require('../../models/Anuncio');
@@ -30,7 +29,7 @@ router.get('/', async (req, res, next) => {
         filtro.price = price;
       };
     if (tags) { 
-      filtro.tags = tags;
+      filtro.tags = {$in: tags};
     };
     const anuncios = await Anuncio.lista(filtro, skip, limit, fields, sort);
     res.json({ results: anuncios });
@@ -39,10 +38,13 @@ router.get('/', async (req, res, next) => {
   }
 });
 
-// GET existing unique tags
-router.get('/tags', async function (req, res) {
-    const tagLists = req.query.tags;
-    res.json({results: tagLists});
+router.get('/tags', async (req, res, next) => {
+    try{
+        const tagLists = await Anuncio.listTags();
+        res.json({tags: tagLists});
+    }catch(err){
+        next(err);
+    }
   });
 
 router.get('/:id', async (req, res, next) => {
