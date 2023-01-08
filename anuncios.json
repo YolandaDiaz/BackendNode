@@ -1,0 +1,43 @@
+[
+    {   "name": "Bicicleta",
+        "sale": true,
+        "price": 150,
+        "photo": "bicicleta.jpg",
+        "tags": ["work", "lifestyle"]
+    },
+    {
+        "name": "iPhone",
+        "sale": true,
+        "price": 512,
+        "photo": "iphone.jpg",
+        "tags": [ "work", "lifestyle", "mobile"]
+    },
+    {
+        "name": "Moto",
+        "sale": false,
+        "price": 1800,
+        "photo": "vespa.jpg",
+        "tags": ["work", "lifestyle", "motor"]
+    },
+    {
+        "name": "Taladro",
+        "sale": false,
+        "price": 35,
+        "photo": "taladro.jpg",
+        "tags": ["work", "motor"]
+    },
+    {
+        "name": "Lampara",
+        "sale": true,
+        "price": 25,
+        "photo": "lampara.jpg",
+        "tags": [ "lifestyle"]
+    },
+    {
+        "name": "Vestido",
+        "sale": true,
+        "price": 10,
+        "photo": "vestido.jpg",
+        "tags": [ "work", "lifestyle"]
+    }
+]
