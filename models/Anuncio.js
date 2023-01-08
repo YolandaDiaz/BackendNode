@@ -10,6 +10,10 @@ const anuncioSchema = new mongoose.Schema({
   tags: {type: [String], required: true, index: true}
 });
 
+anuncioSchema.statics.allowTags = function() {
+  return ["work", "lifestyle", "motor", "mobile"]
+};
+
 anuncioSchema.statics.lista = function(filtro, skip, limit, fields, sort) {
   const query = Anuncio.find(filtro);
   query.skip(skip);
