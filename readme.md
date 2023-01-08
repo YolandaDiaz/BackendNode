@@ -1,10 +1,31 @@
-Nodepop
+# Nodepop
 
-Inicializar:
+Deploy:
+
+```sh
 npm install
+```
 
-Lanzar la aplicación en producción:
+Load initial data to database:
+
+```
+npm run init-db
+```
+
+Start the application in production with:
+
+```sh
 npm start
+```
 
-Lanzar la aplicación en desarrollo:
+Start the application in development with:
+
+```sh
 npm run dev
+```
+
+## API Documentation
+
+Adverts list:
+
+GET /api/anuncios

@@ -8,6 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 require('./lib/connectMongoose');
+require('./routes/api/anuncios');
 
 var app = express();
 
@@ -20,6 +21,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+/**
+ * Rutas de mi API para la práctica de Yoli
+ */
+app.use('/api/anuncios', require('./routes/api/anuncios'));
 
 /**
  * Rutas de mi website para la práctica de Yoli
