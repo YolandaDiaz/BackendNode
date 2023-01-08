@@ -3,13 +3,8 @@ const fs = require('fs');
 const Anuncio = require('./models/Anuncio');
 const Advsinit = "./anuncios.json";
 
-const readLine = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-  });
-
 async function main() {
-  const continuar = await askingYesNo('¿Estás seguro que quieres borrar la base de datos? [n]')
+  const continuar = await askingYesNo('¿Estás seguro que quieres borrar la base de datos?')
   if (!continuar) {
     process.exit();
   };

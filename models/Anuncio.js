@@ -2,7 +2,6 @@
 
 const mongoose = require('mongoose');
 
-
 const anuncioSchema = new mongoose.Schema({
   name: {type: String, required: true, index: true},
   sale: {type: Boolean, required: true, index: true},

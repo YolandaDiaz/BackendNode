@@ -25,6 +25,9 @@ Start the application in development with:
 ```sh
 npm run dev
 ```
+## To authenticate
+user: Admin
+pass: P@ssw0rd
 
 ## API Documentation
 

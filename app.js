@@ -3,6 +3,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
+const authMiddleware = require('./lib/authMiddleware');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
@@ -22,14 +23,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-/**
- * Rutas de mi API para la práctica de Yoli
- */
-app.use('/api/anuncios', require('./routes/api/anuncios'));
-
-/**
- * Rutas de mi website para la práctica de Yoli
- */
+app.use('/api/anuncios', authMiddleware, require('./routes/api/anuncios'));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
