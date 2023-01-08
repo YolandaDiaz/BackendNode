@@ -13,7 +13,6 @@ router.get('/', async (req, res, next) => {
     const name = req.query.name;
     const sale = req.query.sale;
     const price = parseInt(req.query.price);
-    const photo = req.query.photo;
     const tags = req.query.tags;
     const skip = parseInt(req.query.skip);
     const limit = parseInt(req.query.limit);
