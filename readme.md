@@ -45,7 +45,7 @@ http://127.0.0.1:3000/api/anuncios?sale=true
 Example to filter by field: name
 http://127.0.0.1:3000/api/anuncios?fields=name
 
-Pagination example to return ad 3 to 6:
+Pagination example to return ad 3 to 5:
 http://127.0.0.1:3000/api/anuncios?skip=2&limit=3
 
 Example of sorting ordered by price:
